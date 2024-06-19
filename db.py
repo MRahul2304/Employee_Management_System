@@ -134,7 +134,7 @@ class Database:
             self.cur = self.con.cursor()
             
             # Insert data into the EMPLOYEE table
-            sql = "UpDATE EMPLOYEE  SET Name = %s, Age = %s, DOJ = %s, Email = %s, Gender = %s, Contact = %s, Address = %s where id =%s"
+            sql = "UPDATE EMPLOYEE  SET Name = %s, Age = %s, DOJ = %s, Email = %s, Gender = %s, Contact = %s, Address = %s where id =%s"
             values = (name, age, doj, email, gender, contact, address , id)
             self.cur.execute(sql, values)
             self.con.commit()
